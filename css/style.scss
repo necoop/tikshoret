@@ -506,11 +506,7 @@ h2 {
             }
             .email {
               &::before {
-                font-family: "Font Awesome 5 Brands";
                 content: "\f0e0";
-                transform: rotate(90deg);
-                position: relative;
-                left: -1px;
               }
             }
             a {
@@ -520,7 +516,6 @@ h2 {
         }
         .article-right-container {
           display: inline-block;
-          border-bottom: 1px solid #ddd;
           width: 85%;
           .article-description {
             font-family: "Open Sans", sans-serif;
@@ -546,7 +541,9 @@ h2 {
         width: 100%;
       }
       .author-card {
-        margin: 7px 0;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #ddd;
+        margin: 7px 0 0;
         display: flex;
         .author-foto {
           margin-right: 14px;
@@ -589,6 +586,46 @@ h2 {
                 content: "\f081";
               }
             }
+          }
+        }
+      }
+    }
+    .order-box {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      .order {
+        width: 200px;
+        height: 80px;
+        background-color: #e12248;
+        border-radius: 10px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        padding: 15px;
+        color: #fff;
+        font-family: "Merriweather";
+        &:active {
+          top: 1px;
+        }
+        &:hover {
+          background-color: #c61c3e;
+        }
+        .button-box-top {
+          display: flex;
+          font-size: 19px;
+          .favicon {
+            align-self: center;
+            width: 32px;
+            border-radius: 3px;
+            margin-bottom: 5px;
+          }
+          .button-caption-top {
+            align-self: center;
+            margin-left: 10px;
           }
         }
       }
@@ -822,7 +859,7 @@ h2 {
   .main-box .main-box-block .main-box-inner h1 {
     font-size: 30px;
   }
-  .nav-top-right{
+  .nav-top-right {
     margin-top: 0;
   }
 }
