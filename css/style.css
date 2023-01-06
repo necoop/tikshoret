@@ -792,6 +792,9 @@ h2 {
   .main-box .main-box-block .main-box-inner h1 {
     font-size: 30px;
   }
+  .nav-top-right {
+    margin-top: 0;
+  }
 }
 @media (max-width: 540px) {
   .footer .footer-content-box {

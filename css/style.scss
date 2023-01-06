@@ -48,7 +48,6 @@ h2 {
 .nav-top-left,
 .nav-top-center,
 .nav-top-right {
-  // width: 33%;
   display: inline-block;
 }
 .nav-top-left {
@@ -150,7 +149,6 @@ h2 {
   }
 }
 .nav-top-right {
-  // width: 33%;
   text-align: right;
   vertical-align: top;
   margin-top: 5px;
@@ -420,7 +418,6 @@ h2 {
         }
       }
       .article-tags {
-        // width: 948px;
         height: 49px;
         color: #777;
         background: #f8f8f8;
@@ -429,9 +426,6 @@ h2 {
         margin-bottom: 10px;
         font-size: 0.9rem;
         line-height: 2;
-        // .article-video {
-        //   width: 100%;
-        // }
         a {
           color: #0074d9;
           &::after {
@@ -827,6 +821,9 @@ h2 {
   }
   .main-box .main-box-block .main-box-inner h1 {
     font-size: 30px;
+  }
+  .nav-top-right{
+    margin-top: 0;
   }
 }
 
