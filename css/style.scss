@@ -4,9 +4,6 @@ div {
   font-family: "Open Sans";
   font-size: 14px;
 }
-body {
-  min-height: 1000px;
-}
 h1,
 h2,
 h3,
@@ -19,13 +16,14 @@ h5 {
 h2 {
   font-family: "Open Sans";
   font-weight: bold;
-  font-size: 1.4em;
+  font-size: 21px;
 }
 .main-wrapper {
   width: 1300px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  padding: 0 10px;
   .main-box-outer {
     display: flex;
   }
@@ -429,9 +427,9 @@ h2 {
         margin-bottom: 10px;
         font-size: 0.9rem;
         line-height: 2;
-        video {
-          width: 100%;
-        }
+        // .article-video {
+        //   width: 100%;
+        // }
         a {
           color: #0074d9;
           &::after {
@@ -694,6 +692,26 @@ h2 {
           height: fit-content;
           cursor: pointer;
           border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 990px){
+  .main-box-right{
+    display: none;
+  }
+  .main-box{
+    width: 100%;
+    .main-box-block{
+      width: 100%;
+      .main-box-inner{
+        .article-tags{
+          width: 100%;
+          video{
+            width: 100% !important;
+          }
         }
       }
     }
