@@ -805,6 +805,7 @@ h2 {
   }
   .main-box .main-box-block .main-box-inner .article-content .article-left-container {
     width: 100%;
+    border-bottom: 1px dotted #ddd;
   }
   .main-box .main-box-block .main-box-inner .article-content .artical-social {
     display: flex;
