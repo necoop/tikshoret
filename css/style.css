@@ -54,7 +54,6 @@ h2 {
 .nav-top-left,
 .nav-top-center,
 .nav-top-right {
-  width: 33%;
   display: inline-block;
 }
 
@@ -152,7 +151,6 @@ h2 {
 }
 
 .nav-top-right {
-  width: 33%;
   text-align: right;
   vertical-align: top;
   margin-top: 5px;
@@ -291,6 +289,7 @@ h2 {
   color: #888;
   margin-bottom: 20px;
   background: #f8f8f8;
+  overflow: hidden;
 }
 .nav-bot-temas .nav-bot-temas-link {
   text-transform: capitalize;
@@ -329,7 +328,7 @@ h2 {
 }
 .main-box .main-box-block {
   padding-bottom: 30px;
-  width: 969px;
+  width: 96%;
   display: block;
   padding-right: 20px;
   margin-right: 20px;
@@ -405,7 +404,7 @@ h2 {
   border-bottom: 1px dotted #ddd;
 }
 .main-box .main-box-block .main-box-inner .trust-project-badge {
-  width: 415px;
+  width: 100%;
   height: 57px;
   display: flex;
   align-items: center;
@@ -421,7 +420,6 @@ h2 {
   height: 42px;
 }
 .main-box .main-box-block .main-box-inner .article-tags {
-  width: 948px;
   height: 49px;
   color: #777;
   background: #f8f8f8;
@@ -615,7 +613,7 @@ h2 {
   overflow-y: scroll;
 }
 .main-box-right .right-box-container .news-list-container .news-list li {
-  width: 267px;
+  width: 100%;
   font-size: 1em;
   line-height: 1.5em;
   padding-bottom: 10px;
@@ -633,18 +631,17 @@ h2 {
   color: #e12248;
 }
 .main-box-right .right-box-container .news-list-container .news-list li p a::before {
-  content: "[ ";
+  content: "[";
 }
 .main-box-right .right-box-container .news-list-container .news-list li p a::after {
-  content: " ]";
+  content: "]";
 }
 .main-box-right .right-box-container .voiting-container {
   border-top: 1px solid #e12248;
   border-bottom: 1px solid #ddd;
-  padding: 14px;
 }
 .main-box-right .right-box-container .voiting-container .voiting-img {
-  width: 284px;
+  width: 100%;
 }
 .main-box-right .right-box-container .voiting-container .voiting h2 {
   margin: 20px 0 10px 0;
@@ -676,23 +673,6 @@ h2 {
   border-radius: 5px;
 }
 
-@media (max-width: 990px) {
-  .main-box-right {
-    display: none;
-  }
-  .main-box {
-    width: 100%;
-  }
-  .main-box .main-box-block {
-    width: 100%;
-  }
-  .main-box .main-box-block .main-box-inner .article-tags {
-    width: 100%;
-  }
-  .main-box .main-box-block .main-box-inner .article-tags video {
-    width: 100% !important;
-  }
-}
 .footer {
   margin-top: 100px;
 }
@@ -710,13 +690,13 @@ h2 {
 }
 .footer .footer-content-box {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 16.67%);
 }
 .footer .footer-content-box .footer-content-logo {
   padding: 10px;
 }
 .footer .footer-content-box .footer-content-logo a .footer-logo-img {
-  height: 150px;
+  max-height: 150px;
   display: block;
 }
 .footer .footer-content-box .footer-content-logo a h3 {
@@ -730,8 +710,136 @@ h2 {
 }
 .footer .footer-content-box .footer-content-logo a h3:hover {
   text-decoration: underline;
-  color: #E12248;
+  color: #e12248;
 }
 .footer .footer-content-box .footer-content-logo p {
   margin-top: 20px;
+}
+
+@media (max-width: 1300px) {
+  .main-wrapper {
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+}
+@media (max-width: 1070px) {
+  .footer .footer-content-box {
+    grid-template-columns: repeat(5, 20%);
+  }
+}
+@media (max-width: 990px) {
+  .main-box-right {
+    display: none;
+  }
+  .main-box {
+    width: 100%;
+  }
+  .main-box .main-box-block {
+    width: 100%;
+  }
+  .main-box .main-box-block .main-box-inner .article-tags {
+    width: 100%;
+  }
+  .main-box .main-box-block .main-box-inner .article-tags video {
+    width: 100% !important;
+  }
+  .main-box .main-box-block .main-box-inner .pre-title .article-kicker .tooltiptext {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .nav-top-right {
+    height: 93px;
+  }
+  .nav-top-right ul {
+    height: 77px;
+    flex-direction: column;
+  }
+  .nav-bot {
+    display: none;
+  }
+  .footer .footer-content-box {
+    grid-template-columns: repeat(4, 25%);
+  }
+}
+@media (max-width: 800px) {
+  .nav-top-right {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .nav-top-right #evolokProfile ul {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #f8f8f8;
+  }
+  .nav-top-right .nav-top-print {
+    display: none;
+  }
+  .nav-top-left {
+    display: none;
+  }
+  .nav-top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .footer-content-box {
+    grid-template-columns: repeat(3, 33%);
+  }
+  .main-box .main-box-block .main-box-inner h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 540px) {
+  .footer .footer-content-box {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+@media (max-width: 480px) {
+  .main-box .main-box-block .main-box-inner .article-content {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .main-box .main-box-block .main-box-inner .article-content .article-left-container {
+    width: 100%;
+  }
+  .main-box .main-box-block .main-box-inner .article-content .artical-social {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  .main-box .main-box-block .main-box-inner .article-content .artical-social::before {
+    display: none;
+  }
+  .nav-top-center .brand strong {
+    font-size: 48px;
+  }
+  .footer .footer-content-box {
+    grid-template-columns: 1fr;
+  }
+  .main-box .main-box-block .main-box-inner h1 {
+    font-size: 20px;
+  }
+  .main-box .main-box-block .main-box-inner .article-tags {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .main-box .main-box-block .main-box-inner .article-content .article-left-container .artical-social {
+    flex-wrap: wrap;
+  }
+  .main-box .main-box-block .main-box-inner .article-content .article-left-container .artical-social .icon {
+    margin: 5px auto;
+  }
+  .main-box .main-box-block .main-box-inner .article-content .article-right-container {
+    width: 100%;
+  }
+}
+@media (max-width: 280px) {
+  .nav-top-right #evolokProfile ul {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */
