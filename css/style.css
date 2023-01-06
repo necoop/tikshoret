@@ -19,6 +19,12 @@ h5 {
   padding: 0px;
 }
 
+h2 {
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
 .main-wrapper {
   width: 1300px;
   margin: 0 auto;
@@ -123,6 +129,24 @@ h5 {
 
 .nav-top-center {
   text-align: center;
+}
+.nav-top-center .brand strong {
+  font-size: 72px;
+  font-family: "Open Sans";
+  font-weight: bold;
+  color: #000;
+  position: relative;
+}
+.nav-top-center .brand strong::after {
+  content: "";
+  position: absolute;
+  border-bottom: 6px solid #e12248;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  display: block;
+  text-align: center;
+  background-color: #e12248;
 }
 .nav-top-center img {
   position: relative;
@@ -360,8 +384,11 @@ h5 {
 }
 .main-box .main-box-block .main-box-inner .article-header {
   margin-bottom: 10px;
-  padding-bottom: 10px;
+}
+.main-box .main-box-block .main-box-inner .article-subtitle {
   border-bottom: 1px dotted #ddd;
+  padding-bottom: 10px;
+  color: #777;
 }
 .main-box .main-box-block .main-box-inner h1 {
   font-size: 2.6rem;
@@ -407,6 +434,9 @@ h5 {
   font-size: 0.9rem;
   line-height: 2;
 }
+.main-box .main-box-block .main-box-inner .article-tags video {
+  width: 100%;
+}
 .main-box .main-box-block .main-box-inner .article-tags a {
   color: #0074d9;
 }
@@ -438,17 +468,18 @@ h5 {
   margin-right: 29px;
   display: inline-block;
 }
-.main-box .main-box-block .main-box-inner .article-content .article-left-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  border-top: 4px solid #e12248;
-}
 .main-box .main-box-block .main-box-inner .article-content .article-left-container .artical-social {
   position: -webkit-sticky;
   position: sticky;
+  top: 80px;
+}
+.main-box .main-box-block .main-box-inner .article-content .article-left-container .artical-social::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 100%;
+  border-top: 4px solid #e12248;
 }
 .main-box .main-box-block .main-box-inner .article-content .article-left-container .artical-social .icon {
   margin: 14px auto;
@@ -482,6 +513,8 @@ h5 {
   font-family: "Font Awesome 5 Brands";
   content: "\f0e0";
   transform: rotate(90deg);
+  position: relative;
+  left: -1px;
 }
 .main-box .main-box-block .main-box-inner .article-content .article-left-container .artical-social a {
   font-size: 1.2em;
@@ -489,6 +522,15 @@ h5 {
 .main-box .main-box-block .main-box-inner .article-content .article-right-container {
   display: inline-block;
   border-bottom: 1px solid #ddd;
+  width: 85%;
+}
+.main-box .main-box-block .main-box-inner .article-content .article-right-container .article-description {
+  font-family: "Open Sans", sans-serif;
+  color: rgb(53, 63, 68);
+}
+.main-box .main-box-block .main-box-inner .article-content .article-right-container .article-status {
+  text-align: end;
+  color: #555;
 }
 .main-box .main-box-block .main-box-inner .article-content .article-right-container p {
   font-size: 16px;
@@ -501,17 +543,60 @@ h5 {
 }
 .main-box .main-box-block .main-box-inner .aticle-foto {
   margin-top: 15px;
-  width: 948px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+}
+.main-box .main-box-block .main-box-inner .author-card {
+  margin: 7px 0;
+  display: flex;
+}
+.main-box .main-box-block .main-box-inner .author-card .author-foto {
+  margin-right: 14px;
+}
+.main-box .main-box-block .main-box-inner .author-card .author-foto img {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  border: #e12248 solid 0.5px;
+}
+.main-box .main-box-block .main-box-inner .author-card .author-about {
+  display: inline-block;
+}
+.main-box .main-box-block .main-box-inner .author-card .author-about .author-name {
+  font-family: "Merriweather";
+  color: #0074d9;
+}
+.main-box .main-box-block .main-box-inner .author-card .author-about .author-name:hover {
+  text-decoration: underline;
+}
+.main-box .main-box-block .main-box-inner .author-card .author-about .author-position {
+  color: #777;
+  font-family: "Merriweather";
+  font-size: 12px;
+}
+.main-box .main-box-block .main-box-inner .author-card .author-about .author-social a {
+  color: gray;
+  font-size: 1.2em;
+  margin-right: 5px;
+}
+.main-box .main-box-block .main-box-inner .author-card .author-about .author-social .author-mail::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0e0";
+}
+.main-box .main-box-block .main-box-inner .author-card .author-about .author-social .author-twitter::before {
+  font-family: "Font Awesome 5 Brands";
+  content: "\f081";
 }
 
 .main-box-right {
   width: 24%;
 }
-.main-box-right .right-box-title {
+.main-box-right .news-title {
   margin-top: 20px;
   text-align: center;
 }
-.main-box-right .right-box-title h3 {
+.main-box-right .news-title h3 {
   text-align: center;
   text-transform: uppercase;
   font-family: "Open Sans";
@@ -521,12 +606,121 @@ h5 {
   font-weight: 700;
   position: relative;
   padding: 4px 0px 0px;
-  border-bottom: 4px solid #E12248;
+  border-bottom: 4px solid #e12248;
   display: inline-block;
 }
-.main-box-right .right-box-container {
-  border-top: 1px solid #E12248;
+.main-box-right .right-box-container .news-list-container {
+  border-top: 1px solid #e12248;
   padding: 14px;
-  background: #F2F2F2;
+  background: #f2f2f2;
+  margin-bottom: 40px;
+}
+.main-box-right .right-box-container .news-list-container .news-list {
+  margin: 0 auto;
   height: 309px;
+  overflow-y: scroll;
+}
+.main-box-right .right-box-container .news-list-container .news-list li {
+  width: 267px;
+  font-size: 1em;
+  line-height: 1.5em;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #ddd;
+  margin-bottom: 10px;
+}
+.main-box-right .right-box-container .news-list-container .news-list li p span {
+  color: #e12248;
+}
+.main-box-right .right-box-container .news-list-container .news-list li p a {
+  color: #0074d9;
+}
+.main-box-right .right-box-container .news-list-container .news-list li p a:hover {
+  text-decoration: underline;
+  color: #e12248;
+}
+.main-box-right .right-box-container .news-list-container .news-list li p a::before {
+  content: "[ ";
+}
+.main-box-right .right-box-container .news-list-container .news-list li p a::after {
+  content: " ]";
+}
+.main-box-right .right-box-container .voiting-container {
+  border-top: 1px solid #e12248;
+  border-bottom: 1px solid #ddd;
+  padding: 14px;
+}
+.main-box-right .right-box-container .voiting-container .voiting-img {
+  width: 284px;
+}
+.main-box-right .right-box-container .voiting-container .voiting h2 {
+  margin: 20px 0 10px 0;
+}
+.main-box-right .right-box-container .voiting-container .voiting input {
+  margin-right: 10px;
+  height: 25px;
+}
+.main-box-right .right-box-container .voiting-container .voiting .voiting-list li {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  line-height: 1.5em;
+  color: #333;
+}
+.main-box-right .right-box-container .voiting-container .voiting .submit {
+  margin: 20px auto;
+  display: block;
+  padding: 10px 24px;
+  background: #e12248;
+  color: #fff;
+  line-height: 1.15;
+  font-family: sans-serif;
+  font-size: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.footer {
+  margin-top: 100px;
+}
+.footer .footer-caption {
+  padding: 8px 0;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  background: #222222;
+  color: white;
+  width: 100%;
+}
+.footer .footer-caption h2 {
+  text-align: center;
+  font-size: 17px;
+}
+.footer .footer-content-box {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.footer .footer-content-box .footer-content-logo {
+  padding: 10px;
+}
+.footer .footer-content-box .footer-content-logo a .footer-logo-img {
+  height: 150px;
+  display: block;
+}
+.footer .footer-content-box .footer-content-logo a h3 {
+  font-size: 18px;
+  font-family: "Open Sans";
+  font-weight: 700;
+  color: #000;
+  text-align: start;
+  transition: 0.2s ease;
+  line-height: 40px;
+}
+.footer .footer-content-box .footer-content-logo a h3:hover {
+  text-decoration: underline;
+  color: #E12248;
+}
+.footer .footer-content-box .footer-content-logo p {
+  margin-top: 20px;
 }/*# sourceMappingURL=style.css.map */
