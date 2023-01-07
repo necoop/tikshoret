@@ -597,10 +597,10 @@ h2 {
   color: #fff;
   font-family: "Merriweather";
 }
-.main-box .main-box-block .order-box .order:active {
-  top: 1px;
+.main-box .main-box-block .order-box .order[disabled=true] {
+  justify-content: center;
 }
-.main-box .main-box-block .order-box .order:hover {
+.main-box .main-box-block .order-box .order.active:hover {
   background-color: #c61c3e;
 }
 .main-box .main-box-block .order-box .order .button-box-top {
@@ -616,6 +616,46 @@ h2 {
 .main-box .main-box-block .order-box .order .button-box-top .button-caption-top {
   align-self: center;
   margin-left: 10px;
+}
+.main-box .main-box-block .order-box .order .visability {
+  display: none;
+}
+
+.button {
+  font-size: 40px;
+  align-items: center;
+  transition: 0.4s ease;
+}
+.button .fa-spinner {
+  -webkit-animation: spinner 1.5s linear infinite;
+          animation: spinner 1.5s linear infinite;
+}
+.button .in-process {
+  font-size: 22px;
+}
+.button[disabled=true] {
+  opacity: 0.7;
+}
+
+@-webkit-keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.active:active {
+  top: 1px;
 }
 
 .main-box-right {

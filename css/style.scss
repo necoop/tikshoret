@@ -608,11 +608,13 @@ h2 {
         padding: 15px;
         color: #fff;
         font-family: "Merriweather";
-        &:active {
-          top: 1px;
+        &[disabled="true"]{
+          justify-content: center;
         }
-        &:hover {
-          background-color: #c61c3e;
+        &.active {
+          &:hover {
+            background-color: #c61c3e;
+          }
         }
         .button-box-top {
           display: flex;
@@ -628,10 +630,44 @@ h2 {
             margin-left: 10px;
           }
         }
+        .visability {
+          display: none;
+        }
       }
     }
   }
 }
+
+.button {
+  font-size: 40px;
+  align-items: center;
+  .fa-spinner {
+    animation: spinner 1.5s linear infinite;
+  }
+  .in-process {
+    font-size: 22px;
+  }
+  transition: 0.4s ease;
+  &[disabled="true"] {
+    opacity: 0.7;
+  }
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.active {
+  &:active {
+    top: 1px;
+  }
+}
+
 .main-box-right {
   width: 24%;
   .news-title {
